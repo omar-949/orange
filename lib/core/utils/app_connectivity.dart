@@ -3,7 +3,7 @@ import 'dart:async';
 import 'package:awesome_dialog/awesome_dialog.dart';
 import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_blue/flutter_blue.dart';
+import 'package:flutter_blue_plus/flutter_blue_plus.dart';
 import 'package:go_router/go_router.dart';
 
 class AppConnectivity {
@@ -29,7 +29,7 @@ class AppConnectivity {
   }
 
   static Future<bool> checkBluetooth() async {
-    FlutterBlue flutterBlue = FlutterBlue.instance;
+    FlutterBluePlus flutterBlue = FlutterBluePlus.instance;
     final BluetoothState state = await flutterBlue.state.first;
     return state == BluetoothState.on;
   }
